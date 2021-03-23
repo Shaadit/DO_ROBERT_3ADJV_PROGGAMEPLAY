@@ -52,6 +52,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
      <Compile Include="Assets\Scripts\Gun\GunSystem.cs" />
      <Compile Include="Assets\Scripts\TAccessor.cs" />
      <Compile Include="Assets\Scripts\Controller\MovementModule.cs" />
@@ -66,6 +67,12 @@
      <Compile Include="Assets\Scripts\IUpdater.cs" />
      <Compile Include="Assets\Scripts\Gun\GunModule.cs" />
      <Compile Include="Assets\Scripts\WallsScript.cs" />
+=======
+     <Compile Include="Assets\Scripts\Bullet\BulletSystem.cs" />
+     <Compile Include="Assets\Scripts\Bullet\BulletModule.cs" />
+     <Compile Include="Assets\Scripts\Bullet\BulletScript.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+>>>>>>> Stashed changes
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
