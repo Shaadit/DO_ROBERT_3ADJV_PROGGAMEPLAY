@@ -13,11 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
       ticks: 637520870005559452
-=======
-      ticks: 637520160805065703
->>>>>>> parent of caab6bf (Push Gun + Bullet)
     m_Hash: 2548674612
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
