@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour
     {
         Singleton = this;
         new TAccessor<MovementModule>();
+<<<<<<< HEAD
         
         
+=======
+>>>>>>> parent of caab6bf (Push Gun + Bullet)
     }
 
     // Start is called before the first frame update

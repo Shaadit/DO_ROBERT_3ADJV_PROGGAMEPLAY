@@ -176,6 +176,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -8, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 8050532769365925438}
   - {fileID: 8050532768295673724}
   m_Father: {fileID: 0}
@@ -242,3 +243,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementComponent: {fileID: 0}
   speed: {x: 15, y: 15}
+=======
+  - {fileID: 1690927487909900797}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of caab6bf (Push Gun + Bullet)
