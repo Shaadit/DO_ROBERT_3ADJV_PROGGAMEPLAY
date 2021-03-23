@@ -8,7 +8,9 @@ public class BulletScript : MonoBehaviour
 {
     private List<ScriptableObject> Modules;
     public BulletModule bulletComponent;
-    
+
+    public bool shootDown;
+
     [SerializeField] 
     private Transform bullet;
 
@@ -19,7 +21,8 @@ public class BulletScript : MonoBehaviour
 
     private void Start()
     {
-        bulletComponent = new BulletModule(speed, bullet);
+        Vector3 direction = shootDown == false ? Vector3.up : Vector3.down;
+        bulletComponent = new BulletModule(speed, bullet, direction);
         Modules = new List<ScriptableObject>();
         Modules.Add(bulletComponent);
         TAccessor<BulletModule>.Instance().Add(bulletComponent);

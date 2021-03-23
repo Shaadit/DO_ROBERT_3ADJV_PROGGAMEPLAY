@@ -13,10 +13,9 @@ namespace Bullet
             TAccessor<BulletModule> moduleAccessor = TAccessor<BulletModule>.Instance();
             foreach (var module in moduleAccessor.DisplayListT())
             {
-                module.bulletTransform.position += Vector3.up * (Time.deltaTime * module.speed);
-
+                module.bulletTransform.position += module.direction * (Time.deltaTime * module.speed);
             }
-
+            
         }
     }
 }
