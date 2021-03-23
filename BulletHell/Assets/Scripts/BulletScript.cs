@@ -20,8 +20,8 @@ public class BulletScript : MonoBehaviour
         bullet.transform.position += Vector3.up * (Time.deltaTime * speed);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider wall1, Collider wall2)
     {
-        throw new NotImplementedException();
+        
     }
 }
