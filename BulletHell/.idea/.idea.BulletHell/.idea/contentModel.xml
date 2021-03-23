@@ -26,6 +26,7 @@
           </e>
           <e p="IUpdater.cs" t="Include" />
           <e p="TAccessor.cs" t="Include" />
+          <e p="WallsScript.cs" t="Include" />
         </e>
       </e>
       <e p="BulletHell.sln" t="IncludeFlat" />

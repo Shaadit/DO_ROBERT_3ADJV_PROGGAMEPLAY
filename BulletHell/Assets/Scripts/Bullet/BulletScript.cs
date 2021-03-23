@@ -10,7 +10,7 @@ public class BulletScript : MonoBehaviour
     public BulletModule bulletComponent;
     
     [SerializeField] 
-    private GameObject bullet;
+    private Transform bullet;
 
     [SerializeField] 
     private GameObject wall;
@@ -19,17 +19,10 @@ public class BulletScript : MonoBehaviour
 
     private void Start()
     {
-        bulletComponent = new BulletModule(this.speed, this.gameObject.transform);
+        bulletComponent = new BulletModule(speed, bullet);
         Modules = new List<ScriptableObject>();
         Modules.Add(bulletComponent);
         TAccessor<BulletModule>.Instance().Add(bulletComponent);
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag($"Wall"))
-        {
-            Debug.Log("Touché");
-        }
-    }
+    
 }
