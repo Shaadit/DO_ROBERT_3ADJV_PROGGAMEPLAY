@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
     {
         Singleton = this;
         new TAccessor<MovementModule>();
-        
-        
     }
 
     // Start is called before the first frame update
