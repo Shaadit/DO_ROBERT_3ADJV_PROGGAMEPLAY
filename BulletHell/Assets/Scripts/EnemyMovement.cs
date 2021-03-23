@@ -1,27 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float accelerationTime = 2f;
-    public float maxSpeed = 5f;
-    private Vector2 movement;
-    private float timeLeft;
-    public Rigidbody2D rb;
- 
-    void Update()
+    [SerializeField] private GameObject Enemy;
+
+    public float speedX;
+    public float startX;
+    public float height;
+    
+    public float speedY;
+    public float startY;
+    public float length;
+
+    public float rotSpeed;
+    public float rot;
+
+    private void Update()
     {
-        timeLeft -= Time.deltaTime;
-        if(timeLeft <= 0)
-        {
-            movement = new Vector2(Random.Range(-1f, 1f), (float) 6.75);
-            timeLeft += accelerationTime;
-        }
-    }
- 
-    void FixedUpdate()
-    {
-        rb.AddForce(movement * maxSpeed);
+        transform.position = new Vector2(Mathf.PingPong(Time.time * speedX, length) + startX,
+            Mathf.PingPong(Time.time * speedY, height) + startY);
+        
+        transform.localEulerAngles = new Vector3(0, 0, -Mathf.PingPong(Time.time * rotSpeed, rot));
     }
 }

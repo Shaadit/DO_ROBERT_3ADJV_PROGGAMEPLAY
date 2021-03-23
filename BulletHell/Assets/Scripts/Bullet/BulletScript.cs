@@ -27,5 +27,4 @@ public class BulletScript : MonoBehaviour
         Modules.Add(bulletComponent);
         TAccessor<BulletModule>.Instance().Add(bulletComponent);
     }
-    
 }
