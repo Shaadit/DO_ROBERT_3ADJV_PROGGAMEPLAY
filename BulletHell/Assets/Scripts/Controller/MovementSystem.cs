@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
 
-public class MovementSystem : IUpdater
+namespace Controller
 {
-    public void SystemUpdate()
+    public class MovementSystem : IUpdater
     {
-        TAccessor<MovementModule> myModuleAccessor = TAccessor<MovementModule>.Instance();
-        foreach (var module in myModuleAccessor.DisplayListT())
+        public void SystemUpdate()
         {
-            module.playerTransform.position += new Vector3(module.speedX, module.speedY) * Time.deltaTime;
+            TAccessor<MovementModule> myModuleAccessor = TAccessor<MovementModule>.Instance();
+            foreach (var module in myModuleAccessor.DisplayListT())
+            {
+                module.playerTransform.position += new Vector3(module.speedX, module.speedY) * Time.deltaTime;
+            }
         }
     }
 }

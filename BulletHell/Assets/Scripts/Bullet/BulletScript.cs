@@ -13,17 +13,9 @@ public class BulletScript : MonoBehaviour
     private GameObject bullet;
 
     [SerializeField] 
-    private GameManager wall;
+    private GameObject wall;
 
     public float speed;
-    void FixedUpdate()
-    {
-        Instantiate(bullet, transform);
-        
-        this.bulletComponent.SetSpeed(this.speed);
-        
-        //bullet.transform.position += Vector3.up * (Time.deltaTime * speed);
-    }
 
     private void Start()
     {
@@ -33,8 +25,11 @@ public class BulletScript : MonoBehaviour
         TAccessor<BulletModule>.Instance().Add(bulletComponent);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        throw new NotImplementedException();
+        if (other.gameObject.CompareTag($"Wall"))
+        {
+            Debug.Log("Touché");
+        }
     }
 }

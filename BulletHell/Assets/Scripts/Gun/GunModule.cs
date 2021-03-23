@@ -11,6 +11,16 @@ public class GunModule : ScriptableObject
     public float shotInterval;
     public float shotCounter;
 
+    public GunModule(bool isFiring, BulletScript bullet, Transform firePoint, float bulletSpeed, float shotInterval, float shotCounter)
+    {
+        this.isFiring = isFiring;
+        this.bullet = bullet;
+        this.firePoint = firePoint;
+        this.bulletSpeed = bulletSpeed;
+        this.shotInterval = shotInterval;
+        this.shotCounter = shotCounter;
+    }
+    
     public void SetBulletSpeed(float bulletSpeed)
     {
         this.bulletSpeed = bulletSpeed;
@@ -26,13 +36,5 @@ public class GunModule : ScriptableObject
         this.shotCounter = shotCounter;
     }
 
-    public GunModule(bool isFiring, BulletScript bullet, Transform firePoint, float bulletSpeed, float shotInterval, float shotCounter)
-    {
-        this.isFiring = isFiring;
-        this.bullet = bullet;
-        this.firePoint = firePoint;
-        this.bulletSpeed = bulletSpeed;
-        this.shotInterval = shotInterval;
-        this.shotCounter = shotCounter;
-    }
+    
 }
